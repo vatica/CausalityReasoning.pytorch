@@ -13,9 +13,10 @@ Code for Causality Reasoning.:sunny:
 
 ## Contents
 1. [Overview](#Overview)
-2. [Prepare the Dataset](#Prepare the Dataset)
-3. [Get Checkpoints](#Get Checkpoints)
-4. [Citations](#Citations)
+2. [Prepare the Dataset](#Prepare-the-Dataset)
+3. [Get Checkpoints](#Get-Checkpoints)
+4. [Get Start](#Get-Checkpoints)
+5. [Citations](#Citations)
 
 ## Overview
 ### Files
