@@ -1,0 +1,5 @@
+numpy==1.21.2
+torch==1.6.0+cu92
+torchvision==0.7.0+cu92
+tqdm==4.62.2
+pytorch-transformers==1.2.0
