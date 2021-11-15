@@ -55,7 +55,7 @@ Use this command to start training the model:
 ```python
 nohup python -u main.py >main.log &
 ```
-To test the model, remove the commented part in main.py.
+To test the model, remove the commented part in [main.py](main.py).
 
 ## Citations
 TBD.
