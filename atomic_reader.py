@@ -9,7 +9,7 @@ import random
 
 event_pair = []
 effect, cause = [], []
-df = pd.read_csv("/data/CausalityReasoning.pytorch/dataset/atomic/v4_atomic_all_agg.csv")
+df = pd.read_csv("./dataset/atomic/v4_atomic_all_agg.csv")
 df.iloc[:,1:9] = df.iloc[:,1:9].apply(lambda col: col.apply(json.loads))
 
 for indexs in df.index:
@@ -58,5 +58,5 @@ for i in range(len(cause)):
     event_pair.append(samp)
 
 print(len(event_pair))
-with open('/data/CausalityReasoning.pytorch/dataset/atomic/ATOMIC_event.json', 'w') as f:
+with open('./dataset/atomic/ATOMIC_event.json', 'w') as f:
     json.dump(event_pair, f)

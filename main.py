@@ -519,9 +519,9 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--gpu", default='0', type=str, required=False,
                         help="choose which gpu to use")
-    parser.add_argument("--data_path", default='/data/causal/data/', type=str, required=False,
+    parser.add_argument("--data_path", default='./dataset/', type=str, required=False,
                         help="path of dataset")
-    parser.add_argument("--embed_path", default='/data/causal/glove/glove.6B.300d.txt', type=str, required=False,
+    parser.add_argument("--embed_path", default='./dataset/glove/glove.6B.300d.txt', type=str, required=False,
                         help="path of glove")
     parser.add_argument("--max_obj_len", default=10, type=int, required=False,
                         help="maximum number of objects per image")
@@ -553,7 +553,7 @@ def main():
     word_embeddings = load_embedding_dict(args.embed_path)
     tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
     current_model = CausalityReasoning.from_pretrained('bert-base-uncased').to(device)
-    current_model.load_state_dict(torch.load('/data/CausalityReasoning.pytorch/checkpoints/pretrained_atomic/pretrained_atomic.pth'))
+    current_model.load_state_dict(torch.load('./checkpoints/pretrained_atomic/pretrained_atomic.pth'))
 
     # Load data
     train_data = CausalDataset(args, word_embeddings, tokenizer, device, 'training')
@@ -566,7 +566,7 @@ def main():
     criterion = nn.CrossEntropyLoss()
 
     # for test
-    # current_model.load_state_dict(torch.load('/data/CausalityReasoning.pytorch/checkpoints/model_CR/CR_model.pth'))
+    # current_model.load_state_dict(torch.load('./checkpoints/model_CR/CR_model.pth'))
     # test_performance = test(current_model, test_data)
     # print('Test accuracy:', test_performance)
     # assert 1==2

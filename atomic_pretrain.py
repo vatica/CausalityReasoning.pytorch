@@ -43,7 +43,7 @@ class CausalDataset(Dataset):
     def tensorize_example(self, raw_data, raw_object):
         tensorized_dataset = list()
         if self.mode == 'training':
-            with open('/data/causal/data/atomic/ATOMIC_event.json', 'r') as f:
+            with open('./dataset/atomic/ATOMIC_event.json', 'r') as f:
                 event_list = json.load(f)
             for event in event_list:
                 event_1 = event['event_1']
@@ -377,9 +377,9 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--gpu", default='0', type=str, required=False,
                         help="choose which gpu to use")
-    parser.add_argument("--data_path", default='/data/causal/data/', type=str, required=False,
+    parser.add_argument("--data_path", default='./dataset/', type=str, required=False,
                         help="path of dataset")
-    parser.add_argument("--embed_path", default='/data/causal/glove/glove.6B.300d.txt', type=str, required=False,
+    parser.add_argument("--embed_path", default='./dataset/glove/glove.6B.300d.txt', type=str, required=False,
                         help="path of glove")
     parser.add_argument("--max_obj_len", default=10, type=int, required=False,
                         help="maximum number of objects per image")
@@ -421,11 +421,6 @@ def main():
     optimizer = torch.optim.SGD(current_model.parameters(), lr=args.lr, momentum=args.momentum, weight_decay=1e-4)
     scheduler = WarmupMultiStepLR(optimizer=optimizer)
     criterion = nn.CrossEntropyLoss()
-
-    # current_model.load_state_dict(torch.load('/data/causal/checkpoints/teacher/VCC_2.pth'))
-    # test_performance = test(current_model, test_data)
-    # print('Test accuracy:', test_performance)
-    # assert 1==2
 
     # train
     for i in range(args.epoch):

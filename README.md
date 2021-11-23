@@ -41,9 +41,10 @@ More results are shown in our paper.
 ### Pay Attention
 + The images of the *validation* and *test* sets in the original dataset are interleaved, while we have fixed this problem.
 + We use the Faster R-CNN model from [Scene-Graph-Benchmark.pytorch](https://github.com/KaihuaTang/Scene-Graph-Benchmark.pytorch), objects with a confidence greater than 0.3 are selected (predicted label, bounding box and RoI feature) to be the inputs.
++ The experiments are conducted on a singal NVIDIA Tesla V100 GPU.
 
 ## Prepare the Dataset
-Dataset is available at [here](https://bhpan.buaa.edu.cn:443/link/C8C0A829E4A9173553C30D574257849B).<br/>
+Dataset is available at [here](https://bhpan.buaa.edu.cn:443/link/42E08E6F849ED6A228776AA34A6E2C33).<br/>
 Including ATOMIC, Vis-Causal(original data and detected objects) and GloVe.
 
 ## Get Checkpoints
