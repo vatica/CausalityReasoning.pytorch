@@ -1,6 +1,6 @@
 # Causality Reasoning
 
-[![LICENSE](https://img.shields.io/badge/license-GPL-green)](http://www.buaamsc.com:7929/SY2006304/ACR.pytorch/-/blob/main/LICENSE)
+[![LICENSE](https://img.shields.io/badge/license-GPL-green)](https://github.com/vatica/CausalityReasoning.pytorch/blob/master/LICENSE)
 [![Python](https://img.shields.io/badge/python-3.7-blue)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/pytorch-1.6.0-%237732a8)](https://pytorch.org/get-started/previous-versions/)
 
