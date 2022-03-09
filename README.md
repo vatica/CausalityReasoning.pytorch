@@ -9,7 +9,7 @@ Code for Causality Reasoning.:sunny:
 ## Recent Updates
 - [x] 2021.09.14 Add all codes for experiments.
 - [x] 2021.11.15 Modify the model and get new experimental results.
-- [ ] TODO: Add link to our paper.
+- [x] 2022.03.06 Our paper is accepted by ICME 2022.
 
 ## Contents
 1. [Overview](#Overview)
